@@ -63,13 +63,13 @@ const styles = StyleSheet.create({
   },
   highScores: {
     margin: 10,
-    padding: 25,
+    padding: 15,
     borderWidth: 3,
     borderRadius: 25,
     borderColor: '#f194ff',
   },
   text: {
-    margin: 5,
+    margin: 2,
     color: '#f5f5f5'
   },
   scores: {
@@ -78,11 +78,12 @@ const styles = StyleSheet.create({
   },
   caption1: {
     color: '#f5f5f5',
-    fontSize: 30
+    fontSize: 30,
+    padding: 5
   },
   caption2: {
     color: '#f5f5f5',
-    fontSize: 25
+    fontSize: 20
   },
   button: {
     borderRadius: 20,
