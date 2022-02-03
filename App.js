@@ -8,7 +8,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.caption2}>Welcome to the </Text>
-      <Text style={styles.caption1}>Mouse Clicking Game!</Text>
+      <Text style={styles.caption1}>Clicking Game!</Text>
       <Text style={styles.text}>Click "Start new" to begin!</Text>
       <Text style={styles.text}>You have 10 seconds to click, time left: {timer} s</Text>
       <Text style={styles.text}>You manage to click {count} times</Text>
