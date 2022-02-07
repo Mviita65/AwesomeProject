@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     highScores: {
-      margin: 5,
+      alignItems: 'center',
+      margin: 3,
       padding: 10,
       borderWidth: 3,
       borderRadius: 25,
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     },
     caption1: {
       color: '#f5f5f5',
-      fontSize: 30,
+      fontSize: 35,
       padding: 2,
       fontWeight: 'bold'
     },

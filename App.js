@@ -18,7 +18,6 @@ const App = () => {
     return () => clearInterval(interval); // clears the scheduled interval once the component unmounts
   }, [time,runtime]);
 
-
   return (
     <View style={styles.container}>
       <Text style={styles.caption1}>Clicking Game!</Text>
@@ -50,7 +49,7 @@ const App = () => {
         <Text style={styles.boldText}>High scores:</Text>
         <View style={styles.rowContainer}>
           <Text style={styles.text}>1. place...: </Text>
-          <Text style={styles.scores}>55 clicks</Text>
+          <Text style={styles.scores}>99 clicks</Text>
         </View>
         <View style={styles.rowContainer}>
           <Text style={styles.text}>2. place...: </Text>
