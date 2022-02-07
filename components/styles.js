@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     highScores: {
-      margin: 10,
-      padding: 15,
+      margin: 5,
+      padding: 10,
       borderWidth: 3,
       borderRadius: 25,
-      borderColor: '#f194ff',
+      borderColor: '#f194ff'
     },
     text: {
       margin: 1,
@@ -32,12 +32,14 @@ const styles = StyleSheet.create({
     caption1: {
       color: '#f5f5f5',
       fontSize: 30,
-      padding: 5
+      padding: 2,
+      fontWeight: 'bold'
     },
     caption2: {
       color: '#f5f5f5',
       fontSize: 20,
-      padding: 2
+      padding: 8,
+      fontWeight: 'bold'
     },
     button: {
       borderRadius: 20,
@@ -47,6 +49,10 @@ const styles = StyleSheet.create({
       margin: 10
     },
     buttonText: {
+      fontWeight: 'bold'
+    },
+    boldText: {
+      color: '#f5f5f5',
       fontWeight: 'bold'
     }
   });
