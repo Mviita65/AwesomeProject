@@ -20,14 +20,20 @@ const styles = StyleSheet.create({
       padding: 10,
       borderWidth: 3,
       borderRadius: 25,
+      maxWidth: 250,
+      minWidth: 250,
+      maxHeight: 110,
+      minHeight: 110,
       borderColor: '#f194ff'
     },
     text: {
       margin: 1,
+      paddingHorizontal: 5,
       color: '#f5f5f5'
     },
     scores: {
       textAlign: 'right',
+      paddingHorizontal: 5,
       color: '#f5f5f5'
     },
     caption1: {
