@@ -57,7 +57,11 @@ const App = () => {
             if (time > 0) { // counts clicks if there is time left
               setClickCounter(clickCounter + 1)
             } else {
-              checkHighScores(highScores,setHighScores,clickCounter,trackHighScore,setTrackHighScore)
+              checkHighScores(
+                highScores,setHighScores,
+                clickCounter,
+                trackHighScore,setTrackHighScore
+              )
             }
           }}
           >
