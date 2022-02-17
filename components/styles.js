@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
       borderRadius: 25,
       maxWidth: 250,
       minWidth: 250,
-      maxHeight: 250, //110
-      minHeight: 250,
+      maxHeight: 110,
+      minHeight: 110,
       borderColor: '#f194ff'
     },
     text: {

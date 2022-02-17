@@ -48,7 +48,8 @@ const App = () => {
     <View style={styles.container}>
       <Text style={styles.caption1}>Clicking Game!</Text>
       <Text style={styles.text}>Click "Start new" to begin!</Text>
-      <Text style={styles.text}>You have 5 seconds to click! </Text>
+      <Text style={styles.text}>You have 5 seconds to click "Press me"</Text>
+      <Text style={styles.text}>as many times as you can! </Text>
       <Text style={styles.caption2}>Clicks: {clickCounter}, time left: {time} s</Text>
       <View style={styles.rowContainer}>
         <TouchableOpacity
@@ -60,8 +61,9 @@ const App = () => {
               checkHighScores(
                 highScores,setHighScores,
                 clickCounter,
-                trackHighScore,setTrackHighScore
+                trackHighScore, setTrackHighScore
               )
+              setTrackHighScore(false)
             }
           }}
           >
