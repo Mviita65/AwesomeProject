@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { View, Text, TouchableOpacity, FlatList, ScrollView } from 'react-native';
 import styles from './components/styles';
 import checkHighScores from './components/checkhighscores';
-
+import highScoreList from './components/highscorelist';
 
 const Item = ({ item }) => (
   <View style={styles.rowContainer}>
@@ -12,24 +12,11 @@ const Item = ({ item }) => (
   </View>
 )
 
-
 const App = () => {
   const [time, setTime] = useState(0);
   const [clickCounter, setClickCounter] = useState(0);
   const [trackHighScore, setTrackHighScore] = useState(false);
-
-  const [highScores, setHighScores] = useState([
-    { id: 1, name: 'Name', score: 10 },
-    { id: 2, name: 'Name', score: 9 },
-    { id: 3, name: 'Name', score: 8 },
-    { id: 4, name: 'Name', score: 7 },
-    { id: 5, name: 'Name', score: 6 },
-    { id: 6, name: 'Name', score: 5 },
-    { id: 7, name: 'Name', score: 4 },
-    { id: 8, name: 'Name', score: 3 },
-    { id: 9, name: 'Name', score: 2 },
-    { id: 10, name: 'Name', score: 1 }
-  ]); 
+  const [highScores, setHighScores] = useState(highScoreList); 
 
   const renderItem = ({ item }) => (
     <Item item={item} />
@@ -39,6 +26,12 @@ const App = () => {
     const interval = setInterval(() => {
       if (time > 0) {     // reduce the time if there is time left
         setTime(time-1)
+      } else if (trackHighScore) {
+        checkHighScores(  // checks if there is enough clicks counted to rewrite highscores
+          highScores,setHighScores,
+          clickCounter,
+          trackHighScore, setTrackHighScore
+        )
       }
     }, 1000);
     return () => clearInterval(interval); // clears the scheduled interval once the component unmounts
@@ -57,13 +50,6 @@ const App = () => {
           onPress={() => {
             if (time > 0) { // counts clicks if there is time left
               setClickCounter(clickCounter + 1)
-            } else {
-              checkHighScores(
-                highScores,setHighScores,
-                clickCounter,
-                trackHighScore, setTrackHighScore
-              )
-              setTrackHighScore(false)
             }
           }}
           >

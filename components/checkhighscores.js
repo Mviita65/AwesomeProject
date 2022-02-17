@@ -1,3 +1,4 @@
+
 //Checks if there are enough clicks to rewrite highScores and if so, creates the new highScores list
 
 const checkHighScores = (
