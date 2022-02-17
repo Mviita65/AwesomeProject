@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import { View, Text, TouchableOpacity, FlatList, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 import styles from './components/styles';
 import checkHighScores from './components/checkhighscores';
 import highScoreList from './components/highscorelist';
@@ -27,7 +27,7 @@ const App = () => {
       if (time > 0) {     // reduce the time if there is time left
         setTime(time-1)
       } else if (trackHighScore) {
-        checkHighScores(  // checks if there is enough clicks counted to rewrite highscores
+        checkHighScores(  // checks if there are enough clicks counted to rewrite highscores
           highScores,setHighScores,
           clickCounter,
           trackHighScore, setTrackHighScore
@@ -57,7 +57,7 @@ const App = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => {  // resets the counter to zero and give 10 seconds playing time
+          onPress={() => {  // resets the counter to zero and give 5 seconds playing time
             setClickCounter(0)
             setTime(5) 
             setTrackHighScore(true)
